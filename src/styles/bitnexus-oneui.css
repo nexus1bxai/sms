@@ -1,0 +1,85 @@
+:root {
+  --primary-dark: #191c1f;
+  --primary-grad1: #1fe4a3;
+  --primary-grad2: #3ca7e1;
+  --accent: #e3f9f8;
+  --bubble-a: #1fe4a3;
+  --bubble-b: #3ca7e1;
+  --surface: #23272a;
+  --surface-lift: #262c32;
+  --shadow: 0 4px 24px #1fe4a340;
+}
+
+body, .bitnexus-bg {
+  background: var(--primary-dark);
+  color: #f3f7fa;
+  font-family: 'SamsungOne', 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.card, .chat-bubble {
+  background: var(--surface-lift);
+  border-radius: 2rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
+}
+
+.chat-bubble {
+  padding: 1rem 1.5rem;
+  max-width: 70%;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  position: relative;
+  transition: transform 0.15s, box-shadow 0.15s;
+  word-break: break-word;
+}
+
+.chat-bubble.user-a {
+  background: linear-gradient(90deg, var(--bubble-a), #43e97b 80%);
+  color: #153622;
+  align-self: flex-start;
+}
+
+.chat-bubble.user-b {
+  background: linear-gradient(90deg, var(--bubble-b), #38f9d7 80%);
+  color: #16263a;
+  align-self: flex-end;
+}
+
+.bitnexus-btn {
+  background: linear-gradient(90deg, var(--primary-grad1), var(--primary-grad2) 90%);
+  color: #191c1f;
+  font-weight: 600;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.75rem 2.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 12px #1fe4a340;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.2s, transform 0.1s;
+}
+.bitnexus-btn:active {
+  transform: scale(0.97);
+  background: linear-gradient(90deg, var(--primary-grad2), var(--primary-grad1));
+}
+
+input, .bitnexus-input {
+  background: var(--surface);
+  color: #e3f9f8;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px #0002;
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-grad1);
+  border-radius: 8px;
+}
